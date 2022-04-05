@@ -1,4 +1,4 @@
-from components import vars
+from quizComponents import vars
 
 def total(value):
     # do some logic to see which character you selected

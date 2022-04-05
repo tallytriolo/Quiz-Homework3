@@ -1,5 +1,5 @@
-from components.quizQuestions import questions
-from components import vars, quizTally
+from quizComponents.quizQuestions import questions
+from quizComponents import vars, quizTally
 
 answer1 = questions["q1"][input(questions["q1"]["question"])]
 print(answer1)
