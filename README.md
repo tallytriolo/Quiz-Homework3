@@ -4,8 +4,11 @@ The Marvel Quiz basically contains a series of questions that will describe the 
 
 ========================================================================
 
-# Marvel Quiz Features
-- Write some text here -
+# Features
+- The quiz consists of 4 characters and 6 questions.
+- The questions are related to the characters, who described them during the quiz.
+- Each character has its own score. Then, the questions added up points and at the end your final score will be shown, which will correspond to the character.
+At the end, you can start the quiz again or choose to quit.
 
 ========================================================================
 
