@@ -1,27 +1,33 @@
+import emoji
 from components.quizQuestions import questions
 from components import vars, quizTally
+from colorama import init, Fore, Style
 
+init()
 print("                                                                       ")
-print(">>>>>>>>>>>>>>>>>>>> Welcome to the Marvel Quiz <<<<<<<<<<<<<<<<<<<<<<<")
+print(Fore.CYAN + ">>>>>>>>>>>>>>>>>>>> Welcome to the Marvel Quiz <<<<<<<<<<<<<<<<<<<<<<<")
+print(Style.RESET_ALL)
+result = emoji.emojize(':thumbs_up:')
+print(result)
 print("                                                                       ")
-print("  0000       0000                                             000      ")
+print(Fore.RED + "  0000       0000                                             000      ")
 print("  00000     00000    00000    00  00    0000   0000  000000   000      ")
 print("  00 000   000 00        000   000 000   000   000  000  000  000      ")
 print("  00   00000   00   00000000   00  00     00   00   00000000  000      ")
 print("  00           00   000  000   00          00 00    000       000      ")
 print(" 00000       00000   00000000  0000         000      000000  000000000 ")
+print(Style.RESET_ALL)
 print("                                                                       ")
 print("                                                                       ")
-print("      Think of one of the Marvel characters in this list below \n              and answer the questions > yes < or > no <\n       At the end your character will appear. Enjoy!")
+print("Think of one of the Marvel characters in this list below\n")
+print("and answer the questions > yes < or > no <\n")
+print("At the end your character will appear. Enjoy!\n")
 print("                                                                       ")
 print("__________________________ Captain America ____________________________")
 print("______________________________ Iron Man _______________________________")
 print("_____________________________ Spider-man ______________________________")
 print("________________________________ Hulk _________________________________")
 print("                                                                       ")
-
-#print("Let's start the Quiz!! Or type to quit\n")
-
 
 while vars.start is True:
 
@@ -34,7 +40,7 @@ while vars.start is True:
 		exit()
 
 	print("Let's play: ")
-	print("                                                                       ")
+	print("\n")
 
 	answer1 = questions["q1"][input(questions["q1"]["question"])]
 	print(answer1)
@@ -78,19 +84,14 @@ while vars.start is True:
 	vars.quizTotal += answer7
 	print("+++++++++++\n")
 
-	print("total so far: " + str(vars.quizTotal) + "\n")
+	print("total so far: " + str(vars.quizTotal))
 	quizTally.total(vars.quizTotal)
 
-	#after answer all the questions, figure out who your character is
-	quizTally.total(vars.quizTotal)
-
-	vars.start = True
-
-	#print("Would you like to start the Marvel Quiz again?\n")
-    #choice = input("yes / no?")
-    #if choice == "yes" or choice == "no":
-        #print("End of the quiz for you!")
-        #exit()
-	#elif choice == "yes" or choice == "yes":
-        #vars.quizTotal = 0
-        #vars.character = None
+	print("Would you like to start the Marvel Quiz again?\n")
+	choice = input("Y / N?")
+	if choice == "N" or choice == "n":
+		print("End of the quiz for you!")
+		exit()
+	elif choice == "Y" or choice == "y":
+		vars.quizTotal = 0
+		vars.character = None

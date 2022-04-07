@@ -1,5 +1,4 @@
 from components import vars
-    # do some logic to see which character you selected
 
 def total(value):
     if value == 160:
@@ -9,7 +8,8 @@ def total(value):
     elif value == 340:
         vars.character = vars.characters[2]
     elif value == 460:
-    	vars.character = vars.characters[3]
+        vars.character = vars.characters[3]
+    else:
+        vars.character = "any of the characters!"
 
     print("It's " + vars.character)
-        # add some emoji icons, or show the character image using the Pillow package
