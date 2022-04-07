@@ -25,13 +25,16 @@ print("                                                                       ")
 
 while vars.start is True:
 
-	print("Answer the following questions! Or type to quit\n")
+	print("If you want to give up the game, type > quit < to exit the Marvel quiz.\n")
 
-	vars.start = input("Think one of the characters \n")
+	vars.start = input("Type any key to start \n")
 
 	if vars.start == "quit":
-		print("Your chose to quit!")
+		print("Your chose to quit! See you next time!")
 		exit()
+
+	print("Let's play: ")
+	print("                                                                       ")
 
 	answer1 = questions["q1"][input(questions["q1"]["question"])]
 	print(answer1)
@@ -80,6 +83,8 @@ while vars.start is True:
 
 	#after answer all the questions, figure out who your character is
 	quizTally.total(vars.quizTotal)
+
+	vars.start = True
 
 	#print("Would you like to start the Marvel Quiz again?\n")
     #choice = input("yes / no?")
