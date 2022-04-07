@@ -1,19 +1,37 @@
-from quizComponents.quizQuestions import questions
-from quizComponents import vars, quizTally 
+from components.quizQuestions import questions
+from components import vars, quizTally
 
-print("Welcome to the Marvel Quiz")
-print("-----------------------------------------------------------------------")
+print("                                                                       ")
+print(">>>>>>>>>>>>>>>>>>>> Welcome to the Marvel Quiz <<<<<<<<<<<<<<<<<<<<<<<")
+print("                                                                       ")
 print("  0000       0000                                             000      ")
 print("  00000     00000    00000    00  00    0000   0000  000000   000      ")
-print("  00 000   000 00        000   000'000   000   000  000  000  000      ")
-print("  00  '00000'  00   000''000   00  00     00   00   00000000  000      ")
+print("  00 000   000 00        000   000 000   000   000  000  000  000      ")
+print("  00   00000   00   00000000   00  00     00   00   00000000  000      ")
 print("  00           00   000  000   00          00 00    000       000      ")
 print(" 00000       00000   00000000  0000         000      000000  000000000 ")
-print("-----------------------------------------------------------------------")
+print("                                                                       ")
+print("                                                                       ")
+print("      Think of one of the Marvel characters in this list below \n              and answer the questions > yes < or > no <\n       At the end your character will appear. Enjoy!")
+print("                                                                       ")
+print("__________________________ Captain America ____________________________")
+print("______________________________ Iron Man _______________________________")
+print("_____________________________ Spider-man ______________________________")
+print("________________________________ Hulk _________________________________")
+print("                                                                       ")
 
-print("Answer the following questions! Or type to quit\n")
+#print("Let's start the Quiz!! Or type to quit\n")
 
-while start_quiz is True:
+
+while vars.start is True:
+
+	print("Answer the following questions! Or type to quit\n")
+
+	vars.start = input("Think one of the characters \n")
+
+	if vars.start == "quit":
+		print("Your chose to quit!")
+		exit()
 
 	answer1 = questions["q1"][input(questions["q1"]["question"])]
 	print(answer1)
@@ -51,7 +69,7 @@ while start_quiz is True:
 	vars.quizTotal += answer6
 	print("+++++++++++\n")
 
-	answer7 = questions["q2"][input(questions["q2"]["question"])]
+	answer7 = questions["q7"][input(questions["q7"]["question"])]
 	print(answer7)
 
 	vars.quizTotal += answer7
@@ -62,3 +80,12 @@ while start_quiz is True:
 
 	#after answer all the questions, figure out who your character is
 	quizTally.total(vars.quizTotal)
+
+	#print("Would you like to start the Marvel Quiz again?\n")
+    #choice = input("yes / no?")
+    #if choice == "yes" or choice == "no":
+        #print("End of the quiz for you!")
+        #exit()
+	#elif choice == "yes" or choice == "yes":
+        #vars.quizTotal = 0
+        #vars.character = None

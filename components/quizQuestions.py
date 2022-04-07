@@ -12,7 +12,7 @@ questions = {
         "no" : 0
     },
 
-        "q3" : {
+    "q3" : {
         "question" : "Are you genetically modified? ",
         "yes" : 30,
         "no" : 0

@@ -1,11 +1,11 @@
 # Marvel Quiz Homework3
 This is a Marvel Quiz for Multimedia Authoring 1 - Homework3.
-The Marvel Quiz basically contains a series of questions that will describe the following characters: Spider-Man, Captain America, Wolverine and Hulk. Throughout the questions, points will be added that will correspond to the final score and the character will be displayed.
+The Marvel Quiz basically contains a series of questions that will describe the following characters: Captain America, Iron Man, Spider-man and Hulk. Throughout the questions, points will be added that will correspond to the final score and the character will be displayed.
 
 ========================================================================
 
 # Features
-- The quiz consists of 4 characters and 6 questions.
+- The quiz consists of 4 characters and 7 questions.
 - The questions are related to the characters, who described them during the quiz.
 - Each character has its own score. Then, the questions added up points and at the end your final score will be shown, which will correspond to the character.
 At the end, you can start the quiz again or choose to quit.
