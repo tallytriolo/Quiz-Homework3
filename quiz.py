@@ -2,7 +2,6 @@ import emoji
 from components.quizQuestions import questions
 from components import vars, quizTally
 from colorama import init, Fore, Style, Back
-from PIL import Image
 
 init()
 print("                                                                       ")
@@ -33,17 +32,6 @@ print("Let's play: \n")
 print(Style.RESET_ALL)
 
 while vars.start is True:
-
-	# print("If you want to give up the game, type > quit < to exit the Marvel quiz.\n")
-	#
-	# vars.start = input(Fore.CYAN + "Type any key to start \n")
-	#
-	# result = emoji.emojize(':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:')
-	# print(result)
-	#
-	# if vars.start == "quit":
-	# 	print("Your chose to quit! See you next time!")
-	# 	exit()
 
 	answer1 = questions["q1"][input(questions["q1"]["question"])]
 	print(answer1)
@@ -112,10 +100,12 @@ while vars.start is True:
 	quizTally.total(vars.quizTotal)
 	print(Style.RESET_ALL)
 
-	print("Would you like to start the Marvel Quiz again?\n")
+	print(Fore.CYAN + "Would you like to start the Marvel Quiz again?\n")
+	print(Style.RESET_ALL)
 	choice = input("Y / N?")
 	if choice == "N" or choice == "n":
-		print("End of the quiz for you!")
+		print(Fore.YELLOW + "Quiz end for you!")
+		print(Style.RESET_ALL)
 		exit()
 	elif choice == "Y" or choice == "y":
 		vars.quizTotal = 0

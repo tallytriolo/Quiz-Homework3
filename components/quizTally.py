@@ -19,6 +19,6 @@ def total(value):
         im = Image.open("images/hulk.jpeg")
         im.show()
     else:
-        vars.character = "none of the characters!! =("
+        vars.character = "NONE OF THE CHARACTERS!!! =("
 
-    print("It's " + vars.character)
+    print("IT'S " + vars.character)
