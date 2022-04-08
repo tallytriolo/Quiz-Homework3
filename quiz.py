@@ -1,14 +1,13 @@
 import emoji
 from components.quizQuestions import questions
 from components import vars, quizTally
-from colorama import init, Fore, Style
+from colorama import init, Fore, Style, Back
+from PIL import Image
 
 init()
 print("                                                                       ")
 print(Fore.CYAN + ">>>>>>>>>>>>>>>>>>>> Welcome to the Marvel Quiz <<<<<<<<<<<<<<<<<<<<<<<")
 print(Style.RESET_ALL)
-result = emoji.emojize(':thumbs_up:')
-print(result)
 print("                                                                       ")
 print(Fore.RED + "  0000       0000                                             000      ")
 print("  00000     00000    00000    00  00    0000   0000  000000   000      ")
@@ -19,73 +18,99 @@ print(" 00000       00000   00000000  0000         000      000000  000000000 ")
 print(Style.RESET_ALL)
 print("                                                                       ")
 print("                                                                       ")
-print("Think of one of the Marvel characters in this list below\n")
-print("and answer the questions > yes < or > no <\n")
-print("At the end your character will appear. Enjoy!\n")
+print(Fore.YELLOW + "Think one of the Marvel characters in this list below\n and answer the questions with > yes < or > no <.\n At the end your character will appear. Enjoy! =) \n")
+print(Style.RESET_ALL)
+print(Back.RED + "__________________________ Captain America ____________________________")
+print(Style.RESET_ALL)
+print(Back.BLUE + "______________________________ Iron Man _______________________________")
+print(Style.RESET_ALL)
+print(Back.YELLOW + "_____________________________ Spider-man ______________________________")
+print(Style.RESET_ALL)
+print(Back.GREEN + "________________________________ Hulk _________________________________")
+print(Style.RESET_ALL)
 print("                                                                       ")
-print("__________________________ Captain America ____________________________")
-print("______________________________ Iron Man _______________________________")
-print("_____________________________ Spider-man ______________________________")
-print("________________________________ Hulk _________________________________")
-print("                                                                       ")
+print("Let's play: \n")
+print(Style.RESET_ALL)
 
 while vars.start is True:
 
-	print("If you want to give up the game, type > quit < to exit the Marvel quiz.\n")
-
-	vars.start = input("Type any key to start \n")
-
-	if vars.start == "quit":
-		print("Your chose to quit! See you next time!")
-		exit()
-
-	print("Let's play: ")
-	print("\n")
+	# print("If you want to give up the game, type > quit < to exit the Marvel quiz.\n")
+	#
+	# vars.start = input(Fore.CYAN + "Type any key to start \n")
+	#
+	# result = emoji.emojize(':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:'':thumbs_up:')
+	# print(result)
+	#
+	# if vars.start == "quit":
+	# 	print("Your chose to quit! See you next time!")
+	# 	exit()
 
 	answer1 = questions["q1"][input(questions["q1"]["question"])]
 	print(answer1)
 
 	vars.quizTotal += answer1
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
 	answer2 = questions["q2"][input(questions["q2"]["question"])]
 	print(answer2)
 
 	vars.quizTotal += answer2
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:'':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
 	answer3 = questions["q3"][input(questions["q3"]["question"])]
 	print(answer3)
 
 	vars.quizTotal += answer3
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:'':star:'':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
 	answer4 = questions["q4"][input(questions["q4"]["question"])]
 	print(answer4)
 
 	vars.quizTotal += answer4
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:'':star:'':star:'':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
 	answer5 = questions["q5"][input(questions["q5"]["question"])]
 	print(answer5)
 
 	vars.quizTotal += answer5
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:'':star:'':star:'':star:'':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
 	answer6 = questions["q6"][input(questions["q6"]["question"])]
 	print(answer6)
 
 	vars.quizTotal += answer6
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:'':star:'':star:'':star:'':star:'':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
 	answer7 = questions["q7"][input(questions["q7"]["question"])]
 	print(answer7)
 
 	vars.quizTotal += answer7
-	print("+++++++++++\n")
+	result = emoji.emojize(':star:'':star:'':star:'':star:'':star:'':star:'':star:')
+	print(result)
+	print(Fore.CYAN + "__________________________________________________\n")
+	print(Style.RESET_ALL)
 
-	print("total so far: " + str(vars.quizTotal))
+	print(Fore.RED + "YOUR FINAL SCORE: " + str(vars.quizTotal))
 	quizTally.total(vars.quizTotal)
+	print(Style.RESET_ALL)
 
 	print("Would you like to start the Marvel Quiz again?\n")
 	choice = input("Y / N?")
